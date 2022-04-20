@@ -145,17 +145,17 @@
 //#define BLUETOOTH
 
 //Choose your mother board IC
-// #define STM32F401RC_creality
-#define STM32F103RET6_creality
+#define STM32F401RC_creality
+// #define STM32F103RET6_creality
 
-// Choose the name from boards.h that matches your setup
-#ifndef MOTHERBOARD
-  #ifdef STM32F103RET6_creality
-    #define MOTHERBOARD BOARD_CREALITY_S1
-  #elif ENABLED(STM32F401RC_creality)
-    #define MOTHERBOARD BOARD_CREALITY_S1_F401RC
-  #endif
-#endif
+//Choose the name from boards.h that matches your setup
+// #ifndef MOTHERBOARD
+//   #ifdef STM32F103RET6_creality
+//      #define MOTHERBOARD BOARD_CREALITY_S1
+//   #elif ENABLED(STM32F401RC_creality)
+#define MOTHERBOARD BOARD_CREALITY_S1_F401RC
+//   #endif
+// #endif
 
 // Release version
 #if ENABLED(Z_AXIS_LIMIT_MODE)

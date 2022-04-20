@@ -1,0 +1,143 @@
+###########Resumen#
+Nombre del proyecto: Ender-3s1
+Tiempo del proyecto: 2021-08-19
+Autor: rock.dong
+Entorno de hardware: Ender-3s1-hw24s1_301
+Número de versión del firmware: Ender-3s1-hw24s1_301-sw-2.0.8.9_T
+###########Dependencias#
+Código de Visual Studio 
+
+###########Implementación#
+
+######## #Descripción
+####Ender-3s1-hw24s1_301-sw-2.0.8.9_T versión actualizada
+1. Optimice la función de juego continuo de apagado del supercondensador.
+>>>>2. Optimice la impresión de la caja wifi sin detectar la acción de extracción de la tarjeta.
+3. Cambie el tiempo de actualización de la pantalla para aumentar la sensibilidad de la pantalla.
+4. Optimizar la función de tirar y volver a jugar.
+
+####Ender-3s1-hw24s1_301-sw-2.0.8.10_T versión contenido actualizado
+1. Cuando el sensor térmico no está conectado, la pantalla muestra que la temperatura actual es de 522, que ahora se cambia a -14 ° C.
+2. Corrija el error: la caja WiFi se imprime en línea, la tarjeta TF de la máquina se extrae, la máquina tiene una acción de retroceso cero y la cama caliente de la boquilla comienza a enfriarse.
+
+####Ender-3s1-hw24s1_301-sw-2.0.8.11_T
+ Actualización de contenido de la versión: (20210827)
+1. Detenga la impresión durante la impresión y cambie el valor máximo de la dirección de movimiento del eje Y a punto cero para evitar chocar con la plataforma caliente.
+2. Modifique el movimiento del eje X, el movimiento del eje Y, el movimiento del eje Z en el menú "Preparar - > movimiento del eje" y agregue el efecto de sombra al extrusor durante el ajuste.
+3. Después de corregir el error (5377) de vuelta al punto original, los parámetros del extrusor se muestran incorrectamente;
+4. Error corregido (5376) Después de hacer clic en el menú de la extrusora, todos los parámetros del eje móvil desaparecieron. 
+Nuevas características a completar:
+1. Compatible con la función del interruptor de límite mínimo del eje Z en crTouch.
+Características a optimizar:
+1. Efecto de impresión de apagado y latido continuo.
+2. Algoritmo de cálculo del tiempo restante.
+
+###actualización de contenido de la versión #Ender-3s1-hw24s1_301-sw-2.0.8.12_T (20210830)
+1. Optimización de la detección de rotura de material: Aumente la detección de ciclo 100 veces (100 * 5ms = 500ms) antes de ingresar al interruptor de estado de corte.
+2. Al imprimir una página, seleccione Detener impresión, durante el proceso de puesta a cero, la página de bloqueo de cero atrás salta accidentalmente a la interfaz principal.
+3. Error corregido (6220), durante el proceso de impresión, el tiempo restante para la impresión no coincide con el real.
+
+###actualización de contenido de la versión #Ender-3s1-hw24s1_301-sw-2.0.8.12_1_T (20210902)
+1. Se ha corregido el problema de que el tiempo restante debido a errores (6220) puntos no se borra. （0831）
+2. Se solucionó el problema de que el tiempo restante después de la reanudación de la pausa se borraba a cero causado por 3 puntos.
+3. Cambie la relación de engranajes del eje E (409.5-->424.9). (Requisitos estructurales)
+4. Cambie la sonda CRTouch de nuevo a cero al punto central. (La estructura proporciona coordenadas relativas de extrusión de sprites)
+5. El valor del eje E de "Axis Movement -> Extruder" es 0 cada vez que ingresa a la interfaz.
+
+###actualización de contenido de la versión #Ender-3s1-hw24s1_301-sw-2.0.8.12_2_T (20210902)
+1. Se ha corregido el problema de que el tiempo restante debido a errores (6220) puntos no se borra. （0831）
+2. Se solucionó el problema de que el tiempo restante después de la reanudación de la pausa se borraba a cero causado por 3 puntos.
+3. Cambie la relación de engranajes del eje E (409.5-->424.9). (Requisitos estructurales)
+4. Cambie la sonda CRTouch de nuevo a cero al punto central. (La estructura proporciona coordenadas relativas de extrusión de sprites)
+5. El valor del eje E de "Axis Movement -> Extruder" es 0 cada vez que ingresa a la interfaz.
+6. Cambiado de CRTouch a límite de eje Z.
+7. El método de retorno cero se cambia del centro a la esquina inferior izquierda. (Requisitos estructurales)
+
+###actualización de contenido de la versión #Ender-3s1-hw24s1_301-sw-2.0.8.13_1_T (20210902)
+1. Solucione el problema de que el tiempo de impresión supera las 100 horas y la pantalla está confundida; solucione el problema de que el tiempo restante de extracción de la tarjeta y la rotura de material se borra.
+2. Solucione el problema de que se sigue reproduciendo la tarjeta, haga clic en ya no se le solicita y, a continuación, haga clic para imprimir sin preguntar a la página de extracción de la tarjeta y detenga directamente la impresión.
+
+###actualización de contenido de la versión #Ender-3s1-hw24s1_301-sw-2.0.8.13_2_T (20210902)
+1. Solucione el problema de que el tiempo de impresión supera las 100 horas y la pantalla está confundida; solucione el problema de que el tiempo restante de extracción de la tarjeta y la rotura de material se borra.
+2. Solucione el problema de que se sigue reproduciendo la tarjeta, haga clic en ya no se le solicita y, a continuación, haga clic para imprimir sin preguntar a la página de extracción de la tarjeta y detenga directamente la impresión.
+
+###actualización de contenido de la versión #Ender-3s1-hw24s1_301-sw-2.0.8.14_1_T (20210909)
+1. Después de imprimir el modelo de cambio, el eje Y se cambia de 220 a 135. (Los requisitos estructurales ocultan los orificios del tornillo inferior)
+2. Modifique el método de nivelación automática y la velocidad.
+3. Corrija el hecho de que la primera vez que la placa base se enciende en inglés, el material no se muestra EEPROM y el idioma no se ha guardado, y el valor predeterminado es inglés.
+4. Corregir error (6470): interfaz en inglés - preparar - haga clic para mover el módulo extrusor en el eje, ventana emergente de temperatura indicador de interfaz la visualización de texto no está centrada
+5. Corregir error (6468): el parámetro Control-Motion-Drive Ratio E se muestra incorrectamente (la primera interfaz muestra 424.8, después de la confirmación muestra 424.9)
+6. Corregir error (6444): Después de romper el material, el marco del par emergente está en blanco.
+7. Error corregido (6443): Durante el proceso de impresión, después de que el material esté desactualizado, el tiempo de impresión restante se muestra de forma anormal (el tiempo restante después de la desconexión y la extracción y suspensión de la tarjeta se borrará a cero).
+8. Se solucionó el problema de que el contacto de la interfaz de alimentación era deficiente y causaba el bloqueo.
+9. Cambie el estado de pausa para bloquear el motor del eje X, Y, Z durante 20 minutos.
+10. Modo de límite del eje Z: CRTouch.
+
+###actualización de contenido de la versión #Ender-3s1-hw24s1_301-sw-2.0.8.14_2_T (20210909)
+1. Después de imprimir el modelo de cambio, el eje Y se cambia de 220 a 135. (Los requisitos estructurales ocultan los orificios del tornillo inferior)
+2. Modifique el método de nivelación automática y la velocidad.
+3. Corrija el hecho de que la primera vez que la placa base se enciende en inglés, el material no se muestra EEPROM y el idioma no se ha guardado, y el valor predeterminado es inglés.
+4. Corregir error (6470): interfaz en inglés - preparar - haga clic para mover el módulo extrusor en el eje, ventana emergente de temperatura indicador de interfaz la visualización de texto no está centrada
+5. Corregir error (6468): el parámetro Control-Motion-Drive Ratio E se muestra incorrectamente (la primera interfaz muestra 424.8, después de la confirmación muestra 424.9)
+6. Corregir error (6444): Después de romper el material, el marco del par emergente está en blanco.
+7. Error corregido (6443): Durante el proceso de impresión, después de que el material esté desactualizado, el tiempo de impresión restante se muestra de forma anormal (el tiempo restante después de la desconexión y la extracción y suspensión de la tarjeta se borrará a cero).
+8. Se solucionó el problema de que el contacto de la interfaz de alimentación era deficiente y causaba el bloqueo.
+9. Cambie los motores de eje X, Y, Z que están bloqueados en el estado pausado todo el tiempo.
+10. Modo de límite del eje Z: interruptor de límite.
+
+Eender-3s1-hw24s1_301-sw-V1.0.1_C-CRTouch.bin
+ 1. Modifique "Filement" en el mensaje en inglés para anomalías de rotura de material y cámbielo a "Filament". 
+2. Modifique la interfaz de anomalía del extrusor del eje E "La temperatura de la boquilla es demasiado baja". 
+3. Solucione el problema de que la velocidad de impresión de la APLICACIÓN se vuelve lenta. 
+4. Para perder menos gcode después de la impresión de fallas de energía, el planificador perderá algo de gcode y cambiará los bloques de 16 a 8 bloques de búfer
+
+Eender-3s1-hw24s1_301-sw-V1.0.2_C-CRTouch.bin
+1. La impresión del modelo de dibujo será más lenta
+2. Control - Interfaz de movimiento- La configuración del parámetro 'Velocidad máxima de la esquina' no se puede guardar.
+
+Eender-3s1-hw24s1_301-sw-V1.0.3_C-CRTouch.bin
+1. Agregue la función de calibración de temperatura. (Las placas base sin valores de calibración no se escalarán). 
+2. Cambiar la aceleración del eje Z no se puede establecer en 100-200 error.
+3. Excepción CRTouch, la interfaz de función de nivel automático no se cierra.
+4. Imprima en línea, el puerto serie de la computadora envía el comando de pausa (M25) y la pantalla de la impresora no solicita al botón que continúe imprimiendo.
+
+Eender-3s1-hw24s1_301-sw-V1.0.4_C-CRTouch.bin
+1. Hay un problema de punto blanco en "Permanecer", la razón es que la clave es de dos píxeles más, no afecta la funcionalidad, para no afectar el progreso de la generación, el firmware recomienda no actualizar, la próxima versión se actualiza junta.
+2. Optimice toda la lógica de la tarjeta SD después de la falla de energía y la recuperación de juego continuo, durante el proceso de regreso al origen, presione el botón "STOP". 
+3. Resuelva el problema de que en el proceso de impresión, detener rápidamente la impresión después de romper el material se atascará en la interfaz cero y no saldrá.
+4. Resuelva el proceso de impresión, confirme el "detener impresión" y tire de la tarjeta al mismo tiempo, se atascará en la impresión de bucle gcode actual y no saldrá de la interfaz cero.
+5. Se agregó la función de no responder a la detección de extracción de tarjetas y la detección de roturas a los pocos segundos de detener la impresión.
+6. Se agregó la función de sincronización de aplicaciones al imprimir y sincronizar la impresora.
+7. El dispositivo opera el eje móvil sin posicionamiento de 0 puntos, a riesgo de alcanzar el valor límite. (Es necesario tener en cuenta el encendido después de reanudar el corte de energía)
+8. Interfaz de movimiento del eje, el eje Z es negativo, existe el riesgo de colisión de la boquilla con la cama caliente. (Mejorado, movimiento del eje eje eje z mínimo de 0)
+9. Se corrigió el error de que la pantalla de la perilla ajustaba el volumen de extrusión del extrusor y, a veces, se reiniciaba.
+10. Optimice el problema del riesgo de corte de energía de elevación del eje Z.
+
+Eender-3s1-hw24s1_301-sw-V1.0.4_Z-SWLIM.bin
+1. Hay un problema de punto blanco en "Permanecer", la razón es que la clave es de dos píxeles más, no afecta la funcionalidad, para no afectar el progreso de la generación, el firmware recomienda no actualizar, la próxima versión se actualiza junta.
+2. Optimice toda la lógica de la tarjeta SD después de la falla de energía y la recuperación de juego continuo, durante el proceso de regreso al origen, presione el botón "STOP". 
+3. Resuelva el problema de que en el proceso de impresión, detener rápidamente la impresión después de romper el material se atascará en la interfaz cero y no saldrá.
+4. Resuelva el proceso de impresión, confirme el "detener impresión" y tire de la tarjeta al mismo tiempo, se atascará en la impresión de bucle gcode actual y no saldrá de la interfaz cero.
+5. Se agregó la función de no responder a la detección de extracción de tarjetas y la detección de roturas a los pocos segundos de detener la impresión.
+6. Se agregó la función de sincronización de aplicaciones al imprimir y sincronizar la impresora.
+7. El dispositivo opera el eje móvil sin posicionamiento de 0 puntos, a riesgo de alcanzar el valor límite. (Es necesario tener en cuenta el encendido después de reanudar el corte de energía)
+8. Interfaz de movimiento del eje, el eje Z es negativo, existe el riesgo de colisión de la boquilla con la cama caliente. (Mejorado, movimiento del eje eje eje z mínimo de 0)
+9. Cambiado de CRTouch a interruptor de límite.
+
+Eender-3s1-hw24s1_301-sw-V1.0.5_C-CRTouch.bin
+Qué ha cambiado:
+1. Apoye a los clientes individuales para que agreguen manualmente las instrucciones del G29.
+(1) Motivo del cambio: Bajo la premisa de que la interfaz tiene nivelación automática, los propios clientes individuales aumentan el G29 a los pasos posteriores al calentamiento de cada modelo de impresión, lo que resulta en una falla de nivelación; después del desarrollo de contramedidas, el departamento de posventa aún determina el problema del firmware.
+(2) Estado actual: ha pasado la discusión interna del programa de I + D y la autoprueba de I + D, para ser probado por el departamento de pruebas para producir un informe; para ser verificado por el departamento de calidad e ingeniería.
+
+2. Se optimizó la configuración de restablecimiento de fábrica y la selección de idioma se restauró al inglés predeterminado.
+(1) Motivo del cambio: La fábrica propuso que la configuración de restablecimiento de fábrica no se estableciera en el idioma predeterminado, porque en la etapa MP, no hubo impacto en la función, y no se optimizó en ese momento, y se optimizó y lanzó junto con el primer punto.
+(2) Estado actual: ha pasado la discusión interna del programa de I + D y la autoprueba de I + D, para ser probado por el departamento de pruebas para producir un informe; para ser verificado por el departamento de calidad e ingeniería.
+
+3. Cuando la impresora no esté impresa, haga una pausa durante más de 20 minutos y el motor se desbloqueará;
+(1) Estado actual: Después de cambiar el firmware a pausa, el motor se bloquea hasta que se alimenta 10 mm cuando se reanuda la impresión.
+(2) Estado actual: ha pasado la discusión interna del programa de I + D y la autoprueba de I + D, para ser probado por el departamento de pruebas para producir un informe; para ser verificado por el departamento de calidad e ingeniería.
+
+4. Optimice el desbloqueo artificial del motor, ajuste manualmente la altura del eje Z, existe el riesgo de golpear la plataforma.
+5. Optimice la temperatura mínima de protección de la impresora, cambie de 5 ° C a 0 ° C.
+6. La temperatura de la boquilla y la cama caliente no se cerrará antes de la operación de nivelación automática.
